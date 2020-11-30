@@ -157,8 +157,8 @@ private void countingSort(int[] arr, int[] original, int radix, int digit) {
 Counting sort works by first getting the weight of the digit we want to sort the array according to. Then it gets the frequency of each value for that digit and does cumulative sum on the frequency array, this way for each possible value of this digit, it gets the index until which its occurrences will cover in the resulting array.  
 Then it starts filling the elements in the result array by getting its value and finding where it has to be using the cumulative sum array. It decrements the cumulative sum array for that value so that the next time this value comes up, it'll be put behind the current element.
 <div style="page-break-after: always;"></div>
-Radix sort could be done with any base, so I tried a few and got these results:
-<img src="assets/radixsort.png" width=500/>
+Radix sort could be done with any base, so I tried a few and got these results:  
+<img src="assets/markdown-img-paste-20201201000927690.png" width="500"/> <br />
 We can see that base16 gave the best results with 1.35 seconds. That's a huge improvement over the other options. It gives 8 times better performance than Collections.sort().
 
 <div style="page-break-after: always;"></div>
