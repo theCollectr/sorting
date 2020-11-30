@@ -1,0 +1,92 @@
+collections:
+Result: 10.976 ±(99.9%) 0.933 s/op [Average]
+  Statistics: (min, avg, max) = (10.346, 10.976, 12.226), stdev = 0.617
+  Confidence interval (99.9%): [10.043, 11.909]
+
+Result: 10.724 ±(99.9%) 0.861 s/op [Average]
+  Statistics: (min, avg, max) = (10.273, 10.724, 12.150), stdev = 0.570
+  Confidence interval (99.9%): [9.863, 11.585]
+
+
+
+merge sort:
+Result: 8.050 ±(99.9%) 0.063 s/op [Average]
+  Statistics: (min, avg, max) = (7.989, 8.050, 8.148), stdev = 0.042
+  Confidence interval (99.9%): [7.987, 8.113]
+
+Result: 8.049 ±(99.9%) 0.053 s/op [Average]
+  Statistics: (min, avg, max) = (8.010, 8.049, 8.143), stdev = 0.035
+  Confidence interval (99.9%): [7.996, 8.101]
+
+Result: 8.202 ±(99.9%) 0.379 s/op [Average]
+  Statistics: (min, avg, max) = (7.976, 8.202, 8.626), stdev = 0.250
+  Confidence interval (99.9%): [7.823, 8.580]
+
+
+
+merge sort list:
+Result: 17.511 ±(99.9%) 1.377 s/op [Average]
+  Statistics: (min, avg, max) = (15.561, 17.511, 18.889), stdev = 0.911
+  Confidence interval (99.9%): [16.134, 18.887]
+
+Result: 17.037 ±(99.9%) 1.827 s/op [Average]
+  Statistics: (min, avg, max) = (14.903, 17.037, 17.851), stdev = 1.208
+  Confidence interval (99.9%): [15.210, 18.864]
+
+Result: 16.954 ±(99.9%) 1.764 s/op [Average]
+  Statistics: (min, avg, max) = (14.821, 16.954, 18.154), stdev = 1.167
+  Confidence interval (99.9%): [15.189, 18.718]
+
+
+quicksort:
+first element:
+Result: 5.611 ±(99.9%) 0.150 s/op [Average]
+  Statistics: (min, avg, max) = (5.548, 5.611, 5.875), stdev = 0.099
+  Confidence interval (99.9%): [5.461, 5.761]
+
+last element:
+Result: 5.566 ±(99.9%) 0.057 s/op [Average]
+  Statistics: (min, avg, max) = (5.530, 5.566, 5.637), stdev = 0.038
+  Confidence interval (99.9%): [5.509, 5.623]
+
+middle element:
+Result: 5.640 ±(99.9%) 0.055 s/op [Average]
+  Statistics: (min, avg, max) = (5.601, 5.640, 5.705), stdev = 0.037
+  Confidence interval (99.9%): [5.585, 5.695]
+
+random element:
+Result: 5.458 ±(99.9%) 0.060 s/op [Average]
+  Statistics: (min, avg, max) = (5.414, 5.458, 5.525), stdev = 0.039
+  Confidence interval (99.9%): [5.399, 5.518]
+
+
+radix sort:
+base 2:
+Result: 1.402 ±(99.9%) 0.014 s/op [Average]
+  Statistics: (min, avg, max) = (1.392, 1.402, 1.422), stdev = 0.010
+  Confidence interval (99.9%): [1.387, 1.416]
+
+base 4:
+Result: 1.359 ±(99.9%) 0.011 s/op [Average]
+  Statistics: (min, avg, max) = (1.351, 1.359, 1.372), stdev = 0.007
+  Confidence interval (99.9%): [1.349, 1.370]
+
+base 7:
+Result: 1.351 ±(99.9%) 0.012 s/op [Average]
+  Statistics: (min, avg, max) = (1.339, 1.351, 1.364), stdev = 0.008
+  Confidence interval (99.9%): [1.339, 1.364]
+
+base 8:
+Result: 1.378 ±(99.9%) 0.102 s/op [Average]
+  Statistics: (min, avg, max) = (1.337, 1.378, 1.540), stdev = 0.067
+  Confidence interval (99.9%): [1.276, 1.480]
+
+base 10:
+Result: 1.348 ±(99.9%) 0.029 s/op [Average]
+  Statistics: (min, avg, max) = (1.330, 1.348, 1.391), stdev = 0.019
+  Confidence interval (99.9%): [1.318, 1.377]
+
+base 16:
+Result: 1.344 ±(99.9%) 0.010 s/op [Average]
+  Statistics: (min, avg, max) = (1.333, 1.344, 1.353), stdev = 0.006
+  Confidence interval (99.9%): [1.334, 1.354]
