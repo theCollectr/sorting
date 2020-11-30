@@ -36,6 +36,7 @@ private void mergeSort(int[] arr, int low, int high) {
 It keeps splitting the array into two halves and sorting each half on its own then it merges the results.
 <div style="page-break-after: always;"></div>
 Let's see how the merge happens:
+
 ```Java
 private void merge(int[] arr, int low, int pivot, int high) {
         // values in the original array will be overwritten so we need a copy of it
@@ -163,10 +164,12 @@ We can see that base16 gave the best results with 1.35 seconds. That's a huge im
 <div style="page-break-after: always;"></div>
 
 # Analysis
-looking at the results for each option:
+looking at the results for each option:  
+
 <img src="assets/time.png" width=500/>
 
 <img src="assets/performance.png" width=500/>  
+
 We can clearly see that radix sort is the best algorithm for our application with 8 times better performance than our base-line and 4 times better performance than the closest competitor.  
 Radix sort is a bit heavy on memory, so quicksort might be a good trade-off between performance and memory here.
 
