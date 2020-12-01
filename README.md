@@ -24,7 +24,6 @@ To demonstrate the difference using arrays instead of lists makes, I implemented
 Now let's look at how it works:
 ```Java
 private void mergeSort(int[] arr, int low, int high) {
-        // keeps recursively splitting until size of segment is <= 1
         if (low < high) {
             int pivot = (high + low) / 2;
             mergeSort(arr, low, pivot);
@@ -45,16 +44,13 @@ private void merge(int[] arr, int low, int pivot, int high) {
         System.arraycopy(arr, low, lowerPart, 0, pivot + 1 - low);
         System.arraycopy(arr, pivot + 1, upperPart, 0, high - pivot);
 
-        // merges both parts
         int i = low;
         for (int lowerItr = 0, upperItr = 0; i <= high;){
             if (lowerItr == lowerPart.length) {
-                // in case we reach the end of the lower segment
                 arr[i] = upperPart[upperItr];
                 upperItr++;
             }
             else if (upperItr == upperPart.length) {
-                // in case we reach the end of the upper segment
                 arr[i] = lowerPart[lowerItr];
                 lowerItr++;
             }
@@ -80,7 +76,6 @@ Quicksort has a complexity of O(n log n) and memory complexity of O(log n) which
 Now looking at the implementation:
 ```Java
 private void quickSort(int[] arr, int low, int high) {
-        // keeps recursively splitting until size of segment is <= 1
         if (low < high) {
             // splits the segment into two parts then sorts each segment on its own
             int pivot = split(arr, low, high);
@@ -92,9 +87,8 @@ private void quickSort(int[] arr, int low, int high) {
 We can see it first splits the array into two parts and then sorts each part on its own and keeps doing that recursively. Looking at the `split()` method:
 ``` Java
 private int split(int[] arr, int low, int high) {
-    int pivot = choosePivot(low, high); // gets the pivot
-    swap(arr, pivot, high); // puts the pivot at the end of the segment
-    // puts values smaller than the pivot at the beginning of the segment
+    int pivot = choosePivot(low, high); 
+    swap(arr, pivot, high); 
     int i = low - 1;
     for (int j = low; j < high; j++) {
         if (arr[j] <  arr[high]) {
@@ -102,7 +96,6 @@ private int split(int[] arr, int low, int high) {
             swap(arr, i, j);
         }
     }
-    // puts the pivot in the middle of the segment
     swap(arr, i + 1, high);
     return i + 1;
 }
@@ -124,9 +117,8 @@ private void radixSort(int[] arr, int radix) {
     // finds the max value and then gets the count of digits it has
     int max = max(arr);
     int digitCount = (int) Math.floor((Math.log10(max) / Math.log10(radix) + 1));
-    int[] original = arr.clone(); // values in arr will be overwritten so we need a copy of it
+    int[] original = arr.clone(); 
     for (int digit = 0; digit < digitCount; digit++) {
-        // uses count sort to sort the array according to each digit
         countingSort(arr, original, radix, digit);
     }
 }
@@ -138,7 +130,6 @@ private void countingSort(int[] arr, int[] original, int radix, int digit) {
         int[] digitFreq = new int[radix];
         int div = (int) Math.pow(radix, digit);
 
-        // finds the area each value will cover in the result array
         for (int element: arr) {
             int number = (element / div) % radix;
             digitFreq[number]++;
@@ -146,7 +137,6 @@ private void countingSort(int[] arr, int[] original, int radix, int digit) {
         for (int i = 1; i < radix; i++)
             digitFreq[i] += digitFreq[i - 1];
 
-        // does the actual sorting
         for (int i = arr.length - 1; i >= 0; i--) {
             int number = (original[i] / div) % radix;
             digitFreq[number]--;
