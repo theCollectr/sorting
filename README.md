@@ -114,7 +114,6 @@ Radix sort has a complexity of O(n * m) where m is the number of digits in the m
 Let's look at how it works:
 ```Java
 private void radixSort(int[] arr, int radix) {
-    // finds the max value and then gets the count of digits it has
     int max = max(arr);
     int digitCount = (int) Math.floor((Math.log10(max) / Math.log10(radix) + 1));
     int[] original = arr.clone(); 
